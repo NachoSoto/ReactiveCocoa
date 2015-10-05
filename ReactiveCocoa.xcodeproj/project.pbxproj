@@ -2764,7 +2764,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D047262919E49FE8006002AA /* Debug.xcconfig */;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2783,7 +2785,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D047262B19E49FE8006002AA /* Release.xcconfig */;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2905,7 +2909,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D047262A19E49FE8006002AA /* Profile.xcconfig */;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -2972,7 +2978,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D047262C19E49FE8006002AA /* Test.xcconfig */;
 			buildSettings = {
+				BITCODE_GENERATION_MODE = bitcode;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
