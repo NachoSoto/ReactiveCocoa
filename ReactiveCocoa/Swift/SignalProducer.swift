@@ -1003,7 +1003,7 @@ public func zip<S: SequenceType, Value, Error where S.Generator.Element == Signa
 }
 
 
-extension SignalProducerType where Value: SignalProducerType, Error == Value.Error {
+extension SignalProducerType where Value: SignalProducerType, Error: Value.Error {
 	/// Flattens the inner producers sent upon `producer` (into a single producer of
 	/// values), according to the semantics of the given strategy.
 	///
@@ -1037,7 +1037,7 @@ extension SignalProducerType where Value: SignalProducerType, Error == NoError {
 	}
 }
 
-extension SignalProducerType where Value: SignalType, Error == Value.Error {
+extension SignalProducerType where Value: SignalType, Error: Value.Error {
 	/// Flattens the inner signals sent upon `producer` (into a single producer of
 	/// values), according to the semantics of the given strategy.
 	///
