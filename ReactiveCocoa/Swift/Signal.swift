@@ -664,6 +664,28 @@ extension SignalType {
 			}
 		}
 	}
+
+	@warn_unused_result(message="Did you forget to call `observe` on the signal?")
+	public func single(orError error: Error) -> Signal<Value, Error> {
+		return Signal { observer in
+			var taken: Bool = false
+
+			return self
+				.take(2)
+				.observe { event in
+				if case let .Next(value) = event {
+					if !taken {
+						taken = true
+						observer.sendNext(value)
+					} else {
+						observer.sendFailed(error)
+					}
+				} else {
+					observer.action(event)
+				}
+			}
+		}
+	}
 }
 
 /// A reference type which wraps an array to avoid copying it for performance and
